@@ -4,12 +4,12 @@ class Order:
         self.place = place
 
     def GetWeight(self):
-        with open("weight.txt") as file:
+        with open("order_weight.txt") as file:
             w_array = [row.strip() for row in file]
             return w_array
 
     def GetPlace(self):
-        with open("places.txt") as file:
+        with open("order_places.txt") as file:
             p_array = [row.strip() for row in file]
             return p_array
 
