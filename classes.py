@@ -1,21 +1,21 @@
-class Order(object):
+class Order:
     def __init__(self, weight, place):
         self.weight = weight
         self.place = place
 
     def GetWeight(self):
         with open("weight.txt") as file:
-            warray = [row.strip() for row in file]
-            return warray
+            w_array = [row.strip() for row in file]
+            return w_array
 
     def GetPlace(self):
         with open("places.txt") as file:
-            parray = [row.strip() for row in file]
-            return parray
+            p_array = [row.strip() for row in file]
+            return p_array
 
 
-class Courier(object):
-    def __init__(self, place, capacity):
+class Courier:
+    def __init__(self, capacity, place):
         self.place = place
         self.capacity = capacity
 
